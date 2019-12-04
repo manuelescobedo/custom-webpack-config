@@ -1,15 +1,21 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-
-import { AppVersion } from './models';
-console.log(AppVersion);
+import { APP_VERSION } from '../tokens/app-version';
+import { AppVersion } from '../models/app-version';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [{
+    provide: APP_VERSION,
+    useValue: AppVersion
+  }],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
