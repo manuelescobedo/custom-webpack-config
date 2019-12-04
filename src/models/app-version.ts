@@ -1,4 +1,4 @@
-declare var APPVERSION: string;
+//declare var APPVERSION: string;
 
-export const AppVersion = Object.freeze(APPVERSION);
+export const AppVersion = '1.0.0'; //Object.freeze(APPVERSION);
 
