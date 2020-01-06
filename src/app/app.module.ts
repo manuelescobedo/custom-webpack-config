@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { APP_VERSION } from '../tokens/app-version';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -13,7 +14,7 @@ import { APP_VERSION } from '../tokens/app-version';
   ],
   providers: [{
     provide: APP_VERSION,
-    useValue: '1.0.0'
+    useValue: '1.0.0'// AppVersion
   }],
   bootstrap: [AppComponent]
 })
